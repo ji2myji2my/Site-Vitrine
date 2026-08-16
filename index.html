@@ -40,16 +40,16 @@
 
   <body>
     <header class="site-header">
-      <div class="container">
+      <div class="container site-header__content">
         <a class="site-logo" href="#hero" aria-label="Retour en haut de page">
           Jimmy Mennock
         </a>
 
         <a
-          class="button"
+          class="btn btn--primary"
           href="https://calendar.app.google/hfNfLmBxAxeDS5AP7"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
         >
           Prendre rendez-vous
         </a>
@@ -57,23 +57,48 @@
     </header>
 
     <main>
-      <section id="hero">
-        <div class="container hero-content">
-          <div class="hero-copy">
-            <h1>Jimmy Mennock</h1>
-          </div>
+      <section id="hero" class="hero">
+      <div class="container hero__content">
+        <picture class="hero__photo">
+          <source srcset="assets/profile.webp" type="image/webp">
+          <img
+            src="assets/profile.jpg"
+            alt="Jimmy Mennock, Full-stack AI Engineer freelance"
+            width="768"
+            height="768"
+          >
+        </picture>
 
-          <picture class="hero-photo">
-            <source srcset="assets/profile.webp" type="image/webp">
-            <img
-              src="assets/profile.jpg"
-              alt="Jimmy Mennock, Full-stack AI Engineer freelance"
-              width="768"
-              height="768"
+        <div class="hero__copy">
+          <h1>
+            Vos équipes perdent du temps sur des outils qui n’existent pas.
+            Je les construis.
+          </h1>
+
+          <p class="hero__intro">
+            Je suis freelance FullStack AI Engineer. J’accompagne les entreprises
+            de la phase de cadrage à la production : architecture, développement
+            et pilotage. Interlocuteur unique, j’interviens à distance ou sur site,
+            avec de l’IA lorsque cela apporte un gain concret.
+          </p>
+
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://calendar.app.google/hfNfLmBxAxeDS5AP7"
+              target="_blank"
+              rel="noopener"
             >
-          </picture>
+              Prendre rendez-vous
+            </a>
+
+            <a class="hero__link" href="#methode">
+              Voir comment je travaille
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <section id="offres">
         <div class="container">
