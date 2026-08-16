@@ -1,0 +1,147 @@
+:root {
+  /* Couleurs */
+  --c-bg: #f7f8fa;
+  --c-text: #152033;
+  --c-muted: #526174;
+  --c-accent: #1769aa;
+  --c-surface: #ffffff;
+
+  /* Typographie */
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-h1: clamp(2rem, 5vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --fs-body: 1.0625rem;
+
+  /* Espacement — échelle de 8px */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2rem;
+  --sp-6: 3rem;
+  --sp-8: 4rem;
+
+  /* Layout */
+  --max-w: 68rem;
+  --radius: 0.5rem;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--c-accent);
+}
+
+a:hover {
+  color: var(--c-text);
+}
+
+button,
+.button {
+  background-color: var(--c-accent);
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--c-surface);
+  display: inline-block;
+  font: inherit;
+  padding: var(--sp-1) var(--sp-2);
+  text-decoration: none;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--c-text);
+  color: var(--c-surface);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: var(--max-w);
+  padding-inline: var(--sp-2);
+}
+
+.site-header,
+.site-footer,
+section {
+  padding-block: var(--sp-4);
+}
+
+.site-header .container {
+  align-items: center;
+  display: flex;
+  gap: var(--sp-2);
+  justify-content: space-between;
+}
+
+.site-logo {
+  color: var(--c-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 1.2;
+}
+
+.hero-content {
+  display: grid;
+  gap: var(--sp-4);
+}
+
+.hero-photo {
+  margin-inline: auto;
+  max-width: var(--max-w);
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.hero-photo img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .hero-content {
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-photo {
+    margin-inline: 0;
+  }
+}
