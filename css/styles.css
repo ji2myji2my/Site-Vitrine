@@ -234,6 +234,7 @@ section {
   font-size: var(--fs-small);
   font-weight: 600;
   letter-spacing: 0.08em;
+  margin-top: var(--sp-4);
   margin-bottom: var(--sp-1);
   text-transform: uppercase;
 }
@@ -241,25 +242,28 @@ section {
 .cas__subtitle {
   color: var(--c-muted);
   margin-top: var(--sp-1);
-  max-width: 65ch;
 }
 
 .cas__body {
   display: flex;
   flex-direction: column;
   gap: var(--sp-3);
-  margin-top: var(--sp-4);
-  max-width: 65ch;
+  margin-top: var(--sp-3);
 }
 
 .cas__body > p {
   color: var(--c-muted);
+  hyphens: auto;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
+/* Respiration supplémentaire autour de l'encart, sur l'échelle de 8px */
 .cas__role {
   background-color: var(--c-surface);
   border-inline-start: var(--sp-1) solid var(--c-accent);
   border-radius: var(--radius);
+  margin-block: var(--sp-2);
   padding: var(--sp-3);
 }
 
@@ -284,6 +288,7 @@ section {
 .cas__stack {
   display: flex;
   flex-wrap: wrap;
+  margin-top: var(--sp-2);
   gap: var(--sp-1);
   list-style: none;
   padding-inline-start: 0;
